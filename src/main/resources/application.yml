@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ruleEngine
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/rulebase
+    username: postgres
+    password: swapy
+
+
+logging:
+  level:
+    org.springframework.r2dbc.core: DEBUG
