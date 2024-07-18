@@ -8,6 +8,6 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface RuleRepository extends ReactiveCrudRepository<RuleDbModel,String> {
 
-   Flux<RuleDbModel> findByRuleNamespace(String namespace);
+   Flux<RuleDbModel> findAllByRuleNamespace(String namespace);
 
 }

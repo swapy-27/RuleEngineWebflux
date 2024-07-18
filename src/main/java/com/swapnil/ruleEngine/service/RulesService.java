@@ -18,7 +18,9 @@ public class RulesService {
     public Flux<Rule> getAllRules() {
         return rulesRepository.findAll().map(this::convertRuleDBToRule);
     }
-
+    public  Flux<Rule> getAllRuleByNamespace( String ruleNamespace ) {
+        return rulesRepository.findAllByRuleNamespace(ruleNamespace).map(this::convertRuleDBToRule);
+    }
 
     Rule convertRuleDBToRule(RuleDbModel Rule) {
 
